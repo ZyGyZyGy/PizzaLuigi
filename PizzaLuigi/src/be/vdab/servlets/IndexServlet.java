@@ -9,18 +9,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import be.vdab.entities.Begroeting;
+
 @WebServlet("/index.htm")
 public class IndexServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	private static final String VIEW = "/WEB-INF/JSP/index.jsp";
+    private static final long serialVersionUID = 1L;
+    private static final String VIEW = "/WEB-INF/JSP/index.jsp";
 
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		int uur = LocalDateTime.now().getHour();
-		request.setAttribute("begroeting",
-				uur >= 6 && uur < 12 ? "Goede morgen" : uur >= 12 && uur < 18 ? "Goede middag" : "Goede avond");
-		request.getRequestDispatcher(VIEW).forward(request, response);
-	}
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	    throws ServletException, IOException {
+	request.setAttribute("begroeting", new Begroeting());
+	request.getRequestDispatcher(VIEW).forward(request, response);
+    }
 
 }
