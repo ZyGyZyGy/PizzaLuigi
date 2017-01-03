@@ -11,9 +11,16 @@
 </head>
 <body>
 	<h1>Pizza's</h1>
+	<c:forEach begin='1' end='5'> 
+    &#9733; <%-- de HTML code van een ster --%>
+	</c:forEach>
 	<ul class="zebra">
-		<c:forEach var='pizza' items='${pizzas}'>
-			<li>${pizza.naam} ${pizza.prijs}&euro; ${pizza.pikant? "pikant" : "niet pikant"}</li>
+		<c:forEach var='entry' items='${pizzas}'>
+			<li>${entry.key}: ${entry.value.naam} ${entry.value.prijs}&euro; 
+				<c:if test="${entry.value.pikant}">
+					pikant
+				</c:if>
+			</li>
 		</c:forEach>
 	</ul>
 </body>
