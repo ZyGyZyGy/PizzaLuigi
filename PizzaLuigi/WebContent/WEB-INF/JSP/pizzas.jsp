@@ -16,10 +16,15 @@
 	</c:forEach>
 	<ul class="zebra">
 		<c:forEach var='entry' items='${pizzas}'>
-			<li>${entry.key}: ${entry.value.naam} ${entry.value.prijs}&euro; 
-				<c:if test="${entry.value.pikant}">
-					pikant
-				</c:if>
+			<li>${entry.key}: ${entry.value.naam} ${entry.value.prijs}&euro;
+				<c:choose>
+					<c:when test="${entry.value.pikant}">
+						pikant
+					</c:when>
+					<c:otherwise>
+						niet pikant
+					</c:otherwise>
+				</c:choose>
 			</li>
 		</c:forEach>
 	</ul>
