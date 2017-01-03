@@ -16,7 +16,7 @@
 	</c:forEach>
 	<ul class="zebra">
 		<c:forEach var='entry' items='${pizzas}'>
-			<li>${entry.key}: ${entry.value.naam} ${entry.value.prijs}&euro;
+			<li>${entry.key}: <c:out value="${entry.value.naam}"/> ${entry.value.prijs}&euro;
 				<c:choose>
 					<c:when test="${entry.value.pikant}">
 						pikant
