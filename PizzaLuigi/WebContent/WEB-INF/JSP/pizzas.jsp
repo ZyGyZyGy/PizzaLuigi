@@ -3,13 +3,12 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<title>Pizza's</title>
-<meta charset="UTF-8">
-<meta name='viewport' content='width=device-width,initial-scale=1'>
-<link rel="icon" href="images/favicon.ico">
-<link rel="stylesheet" href="styles/default.css">
+<c:import url="/WEB-INF/JSP/head.jsp">
+	<c:param name="title" value="Pizza's"></c:param>
+</c:import>
 </head>
 <body>
+	<c:import url="/WEB-INF/JSP/menu.jsp"></c:import>
 	<h1>Pizza's</h1>
 	<c:forEach begin='1' end='5'> 
     &#9733; <%-- de HTML code van een ster --%>
