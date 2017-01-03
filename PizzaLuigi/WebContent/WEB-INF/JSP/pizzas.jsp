@@ -23,5 +23,8 @@
 			</li>
 		</c:forEach>
 	</ul>
+	<div>
+		Webmaster: <a href="mailto:${initParam.emailAdresWebmaster}">${initParam.emailAdresWebmaster}</a>
+	</div>
 </body>
 </html>

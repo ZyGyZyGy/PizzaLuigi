@@ -31,7 +31,7 @@
 		<small>Deze pagina werd ${aantalKeerBekeken} keer bekeken.</small>
 	</div>
 	<div>
-		Webmaster: <a href="mailto:${emailAdresWebmaster}">${emailAdresWebmaster}</a>
+		Webmaster: <a href="mailto:${initParam.emailAdresWebmaster}">${initParam.emailAdresWebmaster}</a>
 	</div>
 </body>
 </html>
