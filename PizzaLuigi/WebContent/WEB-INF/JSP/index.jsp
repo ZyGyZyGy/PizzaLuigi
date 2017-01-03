@@ -25,5 +25,6 @@
 			${zaakvoerder.adres.postcode} ${zaakvoerder.adres.gemeente}
 		</dd>
 	</dl>
+	<div><small>Deze pagina werd ${aantalKeerBekeken} keer bekeken.</small></div>
 </body>
 </html>
