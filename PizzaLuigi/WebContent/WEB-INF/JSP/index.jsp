@@ -22,12 +22,12 @@
 		<dt>Gehuwd</dt>
 		<dd>${zaakvoerder.gehuwd ? 'Ja' : 'Nee'}</dd>
 		<dt>Adres</dt>
-		<dd>${zaakvoerder.adres.straat} ${zaakvoerder.adres.huisNr}<br> 
-			${zaakvoerder.adres.postcode} ${zaakvoerder.adres.gemeente}
+		<dd>${zaakvoerder.adres.straat}&nbsp;${zaakvoerder.adres.huisNr}<br> 
+			${zaakvoerder.adres.postcode}&nbsp;${zaakvoerder.adres.gemeente}
 		</dd>
 	</dl>
 	<div>
-		<small>Deze pagina werd ${aantalKeerBekeken} keer bekeken.</small>
+		<small>Deze pagina werd ${indexRequests} keer bekeken.</small>
 	</div>
 	<div>
 		Webmaster: <a href="mailto:${initParam.emailAdresWebmaster}">${initParam.emailAdresWebmaster}</a>
