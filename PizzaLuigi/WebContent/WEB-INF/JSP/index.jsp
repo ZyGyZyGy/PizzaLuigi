@@ -1,4 +1,4 @@
-<%@page contentType='text/html' pageEncoding='UTF-8' session='false'%>
+<%@page contentType='text/html' pageEncoding='UTF-8' session='false' trimDirectiveWhitespaces ='true'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <!doctype html>
 <html lang='nl'>
@@ -11,8 +11,7 @@
 	<c:import url="/WEB-INF/JSP/menu.jsp"></c:import>
 	<h1>Pizza Luigi</h1>
 	<img src=" <c:url value='/images/pizza.jpg'/> " alt="pizza"
-		class="fullwidth"
-	>
+		class="fullwidth">
 	<h2>${begroeting}</h2>
 	<h2>De zaakvoerder</h2>
 	<dl>
