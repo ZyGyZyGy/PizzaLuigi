@@ -1,16 +1,14 @@
-<%@page contentType='text/html' pageEncoding='UTF-8' session='false'
-	trimDirectiveWhitespaces='true'
-%>
+<%@page contentType='text/html' pageEncoding='UTF-8' session='false' trimDirectiveWhitespaces='true'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <!doctype html>
 <html lang="nl">
 <head>
 <c:import url="/WEB-INF/JSP/head.jsp">
-	<c:param name="title" value="Pizzas tussen prijzen"></c:param>
+	<c:param name="title" value="Pizzas tussen prijzen"/>
 </c:import>
 </head>
 <body>
-	<c:import url="/WEB-INF/JSP/menu.jsp"></c:import>
+	<c:import url="/WEB-INF/JSP/menu.jsp"/>
 	<h1>Pizza's tussen prijzen</h1>
 	<form>
 		<label>Van prijs<span>${fouten.van}</span> 
