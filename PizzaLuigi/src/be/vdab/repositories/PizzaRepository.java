@@ -14,6 +14,7 @@ import be.vdab.entities.Pizza;
 public class PizzaRepository {
 
     private static final Map<Long, Pizza> PIZZAS = new ConcurrentHashMap<>();
+
     static {
 	PIZZAS.put(12L, new Pizza(12, "Prosciutto", BigDecimal.valueOf(4), true));
 	PIZZAS.put(14L, new Pizza(14, "Margehrita", BigDecimal.valueOf(5), false));

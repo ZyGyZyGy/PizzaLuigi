@@ -17,8 +17,8 @@
 	</c:forEach>
 	<ul class="zebra">
 		<c:forEach var="pizza" items="${pizzas}">
-			<li>${pizza.id}&nbsp;<c:out value="${pizza.naam}"/>&nbsp;${pizza.prijs}
-				&euro; ${pizza.pikant ? "pikant " : "niet pikant "}
+			<li>${pizza.id}&nbsp;<c:out value="${pizza.naam}"/>&nbsp;${pizza.prijs}&euro;
+			${pizza.pikant ? "pikant " : "niet pikant "}
 				<c:url value="/pizzas/detail.htm" var="detailURL">
 					<c:param name="id" value="${pizza.id}"></c:param>
 				</c:url> 
