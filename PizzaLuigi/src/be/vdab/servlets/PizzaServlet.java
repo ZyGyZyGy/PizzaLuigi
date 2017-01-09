@@ -30,7 +30,7 @@ public class PizzaServlet extends HttpServlet {
 	pizzaFotosPad = this.getServletContext().getRealPath("/pizzafotos");
     }
 
-    @Override
+    @Override 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	    throws ServletException, IOException {
 	((AtomicInteger) this.getServletContext().getAttribute(PIZZAS_REQUESTS)).incrementAndGet();

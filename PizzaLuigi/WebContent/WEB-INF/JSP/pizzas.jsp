@@ -8,7 +8,7 @@
 </c:import>
 </head>
 <body>
-	<script>
+	<script> 
 		document.getElementById('toevoegform').onsubmit = function() {
 			document.getElementById('toevoegknop').disabled = true;
 		};

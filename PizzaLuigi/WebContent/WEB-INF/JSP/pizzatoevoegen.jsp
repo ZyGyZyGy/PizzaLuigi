@@ -2,7 +2,7 @@
 	trimDirectiveWhitespaces='true'
 %>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
-<!doctype html>
+<!doctype html> 
 <html lang="nl">
 <head>
 <c:import url="/WEB-INF/JSP/head.jsp">
