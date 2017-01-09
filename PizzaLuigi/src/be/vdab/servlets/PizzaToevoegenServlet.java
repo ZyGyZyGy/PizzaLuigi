@@ -65,7 +65,7 @@ public class PizzaToevoegenServlet extends HttpServlet {
 	} else {
 	    request.setAttribute("fouten", fouten);
 	    request.getRequestDispatcher(VIEW).forward(request, response);
-	}
+	} 
 
     }
 
