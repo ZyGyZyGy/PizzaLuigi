@@ -18,7 +18,7 @@
 					<li>
 						<label>
 							<input type="checkbox" name="id" value="${pizza.id}">
-							<c:out value='${pizza.naam}'/></label></li> 
+							<c:out value='${pizza.naam}'/> 
 						</label>
 					</li>
 				</c:forEach>
@@ -38,6 +38,15 @@
       document.getElementById('toevoegform').onsubmit = function() { 
         document.getElementById('toevoegknop').disabled=true; 
       }; 
-    </script> 
+    </script>
+	<script> 
+		document.getElementById('toevoegform').onsubmit = function() { 
+		  if (!navigator.cookieEnabled) {  
+		    alert("Dit werkt enkel als cookies aanstaan");  
+		    return false;  
+		  } 
+		  document.getElementById('toevoegknop').disabled=true; 
+		}; 
+</script>
 </body>
 </html>
