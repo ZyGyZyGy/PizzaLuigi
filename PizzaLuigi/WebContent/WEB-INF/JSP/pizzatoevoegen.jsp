@@ -23,7 +23,6 @@
 		</div>
 		<label>Foto<span>${fouten.foto}</span> 
 		<input type='file' name='foto'></label> 
-		<input type="submit" value="Toevogen" id="toevoegknop">
 	</form>
 </body>
 </html>
