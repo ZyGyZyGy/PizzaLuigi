@@ -19,10 +19,14 @@
 			<input name="prijs" value="${param.prijs}" type="number" min="0" required step="0.01">
 		</label>
 		<div>
-			<label><input type="checkbox" name="pikant" value="pikant">Pikant</label>
+			<label>
+				<input type="checkbox" name="pikant" value="pikant">Pikant
+			</label>
 		</div>
 		<label>Foto<span>${fouten.foto}</span> 
-		<input type='file' name='foto'></label> 
+		<input type='file' name='foto'>
+		<input type="submit" value="Toevoegen" id="toevoegknop">
+		</label> 
 	</form>
 </body>
 </html>

@@ -10,6 +10,11 @@
 </head>
 <body>
 	<c:import url="/WEB-INF/JSP/menu.jsp" />
-	Je browser is ${empty browser ? "onbekend" : browser}
+	<dl>
+		<c:forEach var="h" items="${headers}">
+			<dt>${h.key}</dt>
+			<dd>${h.value}</dd>
+		</c:forEach>
+	</dl>
 </body>
 </html>
