@@ -12,7 +12,7 @@
 <body>
 	<c:import url="/WEB-INF/JSP/menu.jsp" />
 	<h1>Pizza toevoegen</h1>
-	<form method="post" id="toevoegform">
+	<form method="post" id="toevoegform" enctype="multipart/form-data">
 		<label>Naam<span>${fouten.naam}</span> 
 			<input name="naam" value="${param.naam}" autofocus required>
 		</label> <label>Prijs<span>${fouten.prijs}</span> 
@@ -21,6 +21,8 @@
 		<div>
 			<label><input type="checkbox" name="pikant" value="pikant">Pikant</label>
 		</div>
+		<label>Foto<span>${fouten.foto}</span> 
+		<input type='file' name='foto'></label> 
 		<input type="submit" value="Toevogen" id="toevoegknop">
 	</form>
 </body>
