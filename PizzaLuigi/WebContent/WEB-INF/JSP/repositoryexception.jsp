@@ -4,7 +4,7 @@
 <!doctype html>
 <html lang='nl'>
 <head>
-<vdab:head title="Problemen bij ophalen data"></vdab:head>
+<vdab:head title="Problemen bij ophalen data"/>
 </head>
 <body>
 	<vdab:menu/>

@@ -5,7 +5,7 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<vdab:head title="Headers"></vdab:head>
+<vdab:head title="Headers"/>
 </head>
 <body>
 	<vdab:menu/>

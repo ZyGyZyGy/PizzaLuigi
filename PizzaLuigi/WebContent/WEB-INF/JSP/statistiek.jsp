@@ -4,7 +4,7 @@
 <!doctype html>
 <html lang='nl'>
 <head>
-<vdab:head title="Statistieken"></vdab:head>
+<vdab:head title="Statistieken"/>
 </head>
 <body>
 	<vdab:menu/>

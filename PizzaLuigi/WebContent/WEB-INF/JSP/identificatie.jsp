@@ -9,7 +9,7 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<vdab:head title="Identificatie"></vdab:head>
+<vdab:head title="Identificatie"/>
 </head>
 <body>
 	<vdab:menu/>

@@ -5,7 +5,7 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<vdab:head title="Voorkeurpizza's"></vdab:head>
+<vdab:head title="Voorkeurpizza's"/>
 </head>
 <body>
 	<vdab:menu/>

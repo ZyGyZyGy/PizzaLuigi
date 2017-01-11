@@ -5,7 +5,7 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<vdab:head title="Pagina niet gevonden"></vdab:head>
+<vdab:head title="Pagina niet gevonden"/>
 </head>
 <body>
 	<vdab:menu/>

@@ -5,7 +5,7 @@
 <!doctype html>
 <html lang='nl'>
 <head>
-<vdab:head title="Pizza Luigi"></vdab:head>
+<vdab:head title="Pizza Luigi"/>
 </head>
 <body>
 	<vdab:menu/>
