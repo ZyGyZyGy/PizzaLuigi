@@ -1,16 +1,14 @@
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false'
-	trimDirectiveWhitespaces='true'
-%>
+	trimDirectiveWhitespaces='true'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
+<%@taglib prefix='vdab' uri='http://vdab.be/tags' %> 
 <!doctype html>
 <html lang="nl">
 <head>
-<c:import url="/WEB-INF/JSP/head.jsp">
-	<c:param name="title" value="Voorkeurpizza's"></c:param>
-</c:import>
+<vdab:head title="Voorkeurpizza's"></vdab:head>
 </head>
 <body>
-	<c:import url="/WEB-INF/JSP/menu.jsp"></c:import>
+	<vdab:menu/>
 	<h1>Voorkeupizza's</h1>
 	<form>
 		<ul class="zonderbolletjes">

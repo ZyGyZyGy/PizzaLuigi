@@ -1,14 +1,13 @@
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false' trimDirectiveWhitespaces='true'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
+<%@taglib prefix='vdab' uri='http://vdab.be/tags' %> 
 <!doctype html>
 <html lang="nl">
 <head>
-<c:import url="/WEB-INF/JSP/head.jsp">
-	<c:param name="title" value="${pizza.naam}"/>
-</c:import>
+<vdab:head title="${pizza.naam}"></vdab:head>
 </head>
 <body>
-	<c:import url="/WEB-INF/JSP/menu.jsp" />
+	<vdab:menu/>
 	<c:choose>
 		<c:when test="${not empty fout}">
 			<div class="fout">${fout}</div>
