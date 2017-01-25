@@ -22,10 +22,10 @@
 		</label> 
 		<input type='submit' value="<fmt:message key='onthoudMe'/>">
 	</form>
-	<c:if test='${not empty naam}'>
+	<c:if test='${not empty gebruikersnaam}'>
 		<div>
 			<fmt:message key='naamLetters'>
-				<fmt:param value='${naam.length()}' />
+				<fmt:param value='${gebruikersnaam.length()}' />
 			</fmt:message>
 		</div>
 	</c:if>
