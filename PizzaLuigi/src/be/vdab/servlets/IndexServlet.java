@@ -19,22 +19,23 @@ public class IndexServlet extends HttpServlet {
     private static final String VIEW = "/WEB-INF/JSP/index.jsp";
     private static final String INDEX_REQUESTS = "indexRequests";
 
-    @Override
-    public void init() throws ServletException {
-	this.getServletContext().setAttribute(INDEX_REQUESTS, new AtomicInteger());
-    }
+	@Override
+	public void init() throws ServletException {
+		this.getServletContext().setAttribute(INDEX_REQUESTS, new AtomicInteger());
+	}
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	((AtomicInteger) this.getServletContext().getAttribute(INDEX_REQUESTS)).incrementAndGet(); //thread safe
-	request.setAttribute("begroeting", new Begroeting());
-	request.setAttribute("zaakvoerder",
-		new Persoon("Luigi", "Peperone", 7, true, new Adres("Grote markt", "3", 9700, "Oudenaarde")));
-	LocalDateTime nu = LocalDateTime.now();
-	request.setAttribute("nu", nu);
-	request.setAttribute("aantalPizzasVerkocht", 23000);
-	request.getRequestDispatcher(VIEW).forward(request, response);
-    }
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		((AtomicInteger) this.getServletContext().getAttribute(INDEX_REQUESTS)).incrementAndGet(); // thread
+																									// safe
+		request.setAttribute("begroeting", new Begroeting());
+		request.setAttribute("zaakvoerder",
+				new Persoon("Luigi", "Peperone", 7, true, new Adres("Grote markt", "3", 9700, "Oudenaarde")));
+		LocalDateTime nu = LocalDateTime.now();
+		request.setAttribute("nu", nu);
+		request.setAttribute("aantalPizzasVerkocht", 23000);
+		request.getRequestDispatcher(VIEW).forward(request, response);
+	}
 
 }

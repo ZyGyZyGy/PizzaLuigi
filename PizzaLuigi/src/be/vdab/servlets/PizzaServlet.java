@@ -26,32 +26,30 @@ public class PizzaServlet extends HttpServlet {
     private final transient PizzaRepository pizzaRepository = new PizzaRepository();
     private String pizzaFotosPad;
 
-    @Resource(name = PizzaRepository.JNDI_NAME)
-    void setDataSource(DataSource dataSource) {
-	pizzaRepository.setDataSource(dataSource);
-    }
-    
-    @Override
-    public void init() throws ServletException {
+	@Resource(name = PizzaRepository.JNDI_NAME)
+	void setDataSource(DataSource dataSource) {
+		pizzaRepository.setDataSource(dataSource);
+	}
 
-	pizzaFotosPad = this.getServletContext().getRealPath("/pizzafotos");
-	this.getServletContext().setAttribute(PIZZAS_REQUESTS, new AtomicInteger());
-    }
+	@Override
+	public void init() throws ServletException {
+		this.getServletContext().setAttribute(PIZZAS_REQUESTS, new AtomicInteger());
+		pizzaFotosPad = this.getServletContext().getRealPath("/pizzafotos");
+	}
 
     @Override 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	((AtomicInteger) this.getServletContext().getAttribute(PIZZAS_REQUESTS)).incrementAndGet();
-	List<Pizza> pizzas = pizzaRepository.findAll();
-	request.setAttribute("pizzas", pizzas);
-	request.setAttribute("pizzaIdsMetFoto",
-		pizzas.stream()
-			.filter(pizza -> Files.exists(Paths.get(pizzaFotosPad, pizza.getId() + ".jpg")))
-			.map(pizza -> pizza.getId())
-			.collect(Collectors.toList())
-			);
-
-	request.getRequestDispatcher(VIEW).forward(request, response);
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		((AtomicInteger) this.getServletContext().getAttribute(PIZZAS_REQUESTS)).incrementAndGet();
+		List<Pizza> pizzas = pizzaRepository.findAll();
+		request.setAttribute("pizzas", pizzas);
+		request.setAttribute("pizzaIdsMetFoto",
+			pizzas.stream()
+				.filter(pizza -> Files.exists(Paths.get(pizzaFotosPad, pizza.getId() + ".jpg")))
+				.map(pizza -> pizza.getId())
+				.collect(Collectors.toList())
+				);
+		request.getRequestDispatcher(VIEW).forward(request, response);
     }
 
 }
