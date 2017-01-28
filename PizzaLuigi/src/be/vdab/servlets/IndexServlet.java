@@ -28,7 +28,6 @@ public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	    throws ServletException, IOException {
 	((AtomicInteger) this.getServletContext().getAttribute(INDEX_REQUESTS)).incrementAndGet(); //thread safe
-	request.setAttribute("emailAdresWebmaster", this.getServletContext().getInitParameter("emailAdresWebmaster"));
 	request.setAttribute("begroeting", new Begroeting());
 	request.setAttribute("zaakvoerder",
 		new Persoon("Luigi", "Peperone", 7, true, new Adres("Grote markt", "3", 9700, "Oudenaarde")));
